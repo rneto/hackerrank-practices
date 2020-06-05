@@ -1,0 +1,1 @@
+cat solution.js.data.txt | node Solution.js
