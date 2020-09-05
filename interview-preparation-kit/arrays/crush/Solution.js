@@ -30,6 +30,7 @@ function readLine() {
 function arrayManipulation(n, queries) {
     let arr = Array(n + 1).fill(0);
     const MAX_QUERIES = queries.length;
+
     for(let q = 0; q < MAX_QUERIES; q++) {
         let [a, b, k] = queries[q];
         arr[a - 1] += k;
@@ -38,10 +39,12 @@ function arrayManipulation(n, queries) {
     
     let max = 0;
     let maxSum = 0;
+
     for(var i = 0; i < n; i++){
         maxSum += arr[i];
         max = Math.max(max, maxSum);
     }    
+    
     return max;
 }
 
