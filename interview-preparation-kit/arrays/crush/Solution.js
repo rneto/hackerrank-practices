@@ -37,14 +37,20 @@ function arrayManipulation(n, queries) {
         arr[b] -= k;
     }
     
+    return getMaxSum(arr);
+}
+
+// Get the accumulated maximum of the array.
+function getMaxSum(arr) {
     let max = 0;
     let maxSum = 0;
+    const ARRAY_LENGTH = arr.length;
 
-    for(var i = 0; i < n; i++){
+    for(var i = 0; i < ARRAY_LENGTH; i++){
         maxSum += arr[i];
         max = Math.max(max, maxSum);
     }    
-    
+
     return max;
 }
 
